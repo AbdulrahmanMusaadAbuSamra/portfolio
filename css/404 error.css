@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Lobster&family=Meddon&family=Monsieur+La+Doulaise&family=Nosifer&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --gold: rgb(255, 115, 50);
+  --blue: rgb(38, 97, 161);
+  --black-light: rgb(30, 30, 30);
+  --black: rgb(0, 0, 0);
+  --wight: rgb(255, 255, 255);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--black);
+  font-family: Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.container {
+  width: 85%;
+  margin: auto;
+}
+.section-error {
+  width: 100%;
+  height: calc(100vh);
+  align-content: center;
+  position: relative;
+}
+.container-error {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container-error h1 {
+  height: 230px;
+  font-size: 150px;
+  color: var(--gold);
+  text-shadow: 7px 0px 5px rgba(255, 255, 255, 0.4);
+}
+.container-error h2 {
+  font-size: 30px;
+  color: var(--blue);
+}
+.container-error p {
+  padding: 50px 0px;
+  color: var(--wight);
+}
+.section-error form {
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  gap: 20px;
+  /* justify-content: space-around; */
+}
+.section-error input {
+  /* width: 70%; */
+  height: 50px;
+  background-color: var(--black-light);
+  color: var(--wight);
+  border: 0px;
+  border-radius: 5px;
+  padding-left: 20px;
+  border: 1px solid var(--wight);
+}
+.section-error input::placeholder {
+  color: var(--color-lightgray);
+}
+.section-error button {
+  /* width: 25%; */
+  background-color: var(--blue);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.section-error button i {
+  color: var(--gold);
+  font-size: 20px;
+}
+.section-error button:hover .section-error i {
+  scale: (1.1);
+}
+
+/* start footer */
+/* .footer {
+  word-spacing: 3px;
+  line-height: 25px;
+  background-color: var(--black-light);
+  height: calc(100vh - 85px);
+  align-content: center;
+  text-align: start;
+  position: relative;
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.footer .About-Us .icons {
+  display: flex;
+  justify-content: space-around;
+}
+.footer .About-Us .icons a i {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  border: solid 1.5px var(--gold);
+  text-align: center;
+  align-content: center;
+  color: var(--gold);
+  transition: 0.2s ease;
+}
+.footer .About-Us a i:hover {
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+.footer .titles-footer {
+  color: var(--blue);
+}
+.footer .About-Us p {
+  color: var(--wight);
+}
+.footer .About-Us a {
+  width: 40px;
+}
+
+.footer hr {
+  width: 55px;
+  border: 1.5px solid var(--gold);
+  margin: 20px 0px 40px;
+}
+.footer .Quick-Links .lines {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.footer .Quick-Links .lines a {
+  color: var(--wight);
+}
+.footer .Quick-Links .lines a:hover {
+  color: var(--blue);
+}
+.footer .Quick-Links .line-one {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.footer ul {
+  list-style: none;
+}
+.footer li {
+  transition: 0.3s ease;
+  margin: 0px 0px 15px;
+}
+.footer ul li::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-radius: 5px;
+  margin-right: 10px;
+  border-top: transparent 5px solid;
+  border-bottom: transparent 5px solid;
+  border-left: 5px solid var(--blue);
+}
+.footer a:hover li {
+  padding-left: 10px;
+}
+
+.footer .OpenHours {
+  color: var(--wight);
+}
+.footer .OpenHours .times {
+  margin-top: 20px;
+}
+.footer .OpenHours .times .time {
+  display: flex;
+  margin-bottom: 10px;
+}
+.footer .OpenHours .times .time i {
+  margin-right: 10px;
+}
+.footer .Newsletter {
+  color: var(--wight);
+}
+.footer .Newsletter form {
+  position: relative;
+  margin-top: 30px;
+}
+.footer .Newsletter form input {
+  color: var(--gold);
+  width: 80%;
+  height: 50px;
+  background-color: var(--blue);
+  border: 1px solid var(--white);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 20px;
+}
+.footer .Newsletter form input::placeholder {
+  color: var(--gold);
+  font-weight: bold;
+}
+.footer .Newsletter form button {
+  position: absolute;
+  width: 20%;
+  height: 50px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: var(--gold);
+}
+.footer .Newsletter form button:hover {
+  background-color: var(--blue);
+  border-left: 1px solid var(--wight);
+}
+.footer-text {
+  background-color: var(--black);
+  color: var(--gold);
+  text-align: center;
+  align-content: center;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+}
+.footer-text a {
+  color: var(--blue);
+} */
+/* end footer */

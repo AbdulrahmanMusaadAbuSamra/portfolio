@@ -1,0 +1,638 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Lobster&family=Meddon&family=Monsieur+La+Doulaise&family=Nosifer&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --gold: rgb(255, 115, 50);
+  --blue: rgb(38, 97, 161);
+  --black-light: rgb(30, 30, 30);
+  --black: rgb(0, 0, 0);
+  --wight: rgb(255, 255, 255);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--black);
+  font-family: Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 85%;
+  margin: auto;
+}
+/* start header */
+header {
+  box-shadow: 1px 5px 20px var(--blue);
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0px;
+}
+header .container .logo {
+  margin: 0px;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--blue);
+  font-family: "Nosifer", sans-serif;
+}
+header .container .logo span {
+  color: var(--gold);
+}
+header .container a {
+  color: var(--blue);
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+header nav ul li {
+  position: relative;
+}
+header nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  width: 100%;
+  border-bottom: 2px solid var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.7s ease;
+}
+header nav ul li:hover::after {
+  transform: scaleX(1);
+}
+header nav ul li:hover a {
+  color: var(--gold);
+}
+header nav ul li .active {
+  color: var(--gold);
+}
+header nav ul li .active::after {
+  content: "";
+  border-bottom: 2px solid var(--gold);
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  right: 0px;
+  bottom: -10px;
+  color: var(--gold);
+}
+header nav ul li:hover li a {
+  color: var(--gold);
+}
+header nav ul li a {
+  color: var(--wight);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+header .container i {
+  font-weight: 900;
+  color: var(--blue);
+  font-size: 25px;
+  display: none;
+}
+/* end header */
+/* start section-1 */
+.section-1 {
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-1 .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+}
+.section-1 .container p {
+  font-weight: bold;
+  font-size: 20px;
+}
+.section-1 .container h1 {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 85px;
+  color: var(--wight);
+  margin-bottom: 0px;
+}
+.section-1 .container p {
+  color: var(--gold);
+}
+.section-1 .container span {
+  color: var(--blue);
+}
+.section-1 .container button {
+  width: 25%;
+  height: 50px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.section-1 .container button:hover {
+  background-color: var(--black-light);
+}
+.section-1 .button-1 {
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  color: var(--gold);
+  margin-right: 10px;
+}
+.section-1 .container .button-2 {
+  border: 1px solid var(--gold);
+  background-color: var(--gold);
+  color: var(--blue);
+}
+.section-1 img {
+  width: 48%;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 100px;
+}
+.section-1 .img-section-2 {
+  display: none;
+}
+/* end section-1 */
+/* Similar features with in each sections */
+.sections {
+  padding-top: 125px;
+  align-items: center;
+  text-align: center;
+}
+.sections .container .title-sections {
+  width: 50%;
+  margin: auto;
+}
+.sections .container .h1-title {
+  margin: 0px;
+  color: var(--blue);
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 40px;
+  z-index: 0;
+}
+.h1-title .span-title {
+  display: block;
+  font-size: 120px;
+  font-weight: 900;
+  color: rgba(53, 122, 196, 0.235);
+  line-height: 30px;
+}
+.p-title {
+  margin: 35px auto;
+  line-height: 20px;
+  color: var(--wight);
+}
+/* Similar features with in each sections */
+/* start section-2 */
+.section-2 .content-image {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.section-2 .container .content-image img {
+  width: 50%;
+  border-bottom-right-radius: 50px;
+}
+.section-2 .content-image .content {
+  text-align: left;
+  width: 40%;
+}
+.section-2 .content-image .content .h3 {
+  margin-top: 40px;
+  color: var(--blue);
+}
+.section-2 .content-image .data {
+  display: flex;
+  align-items: center;
+  line-height: 50px;
+}
+.section-2 .content-image .data p {
+  color: var(--gold);
+}
+.section-2 .content-image .data H3 {
+  color: var(--blue);
+  margin-right: 20px;
+}
+.section-2 .content h3 span {
+  color: var(--gold);
+}
+.section-2 .container button {
+  margin-top: 40px;
+  width: 36%;
+  height: 45px;
+  background-color: var(--gold);
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.5 ease;
+  letter-spacing: 2px;
+}
+.section-2 .container button:hover {
+  background-color: var(--black-light);
+  border: 1px solid var(--gold);
+}
+/* end section-2 */
+/* start section-3 */
+.section-3 .container .cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 80px;
+}
+.section-3 .container .cards a:hover .card {
+  background-color: var(--blue);
+}
+.section-3 .container .cards a:hover i {
+  color: var(--gold);
+}
+.section-3 .container .cards a:hover h4 {
+  color: var(--wight);
+}
+.section-3 .container .cards a:hover hr {
+  background-color: var(--gold);
+}
+.section-3 .container .cards .card {
+  background-color: var(--black-light);
+  padding: 50px 40px;
+}
+.section-3 .container .cards .card i {
+  transition: 0.5s ease;
+  color: var(--blue);
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.section-3 .container .cards .card h4 {
+  transition: 0.5s ease;
+  color: var(--gold);
+}
+.section-3 .container .cards .card hr {
+  transition: 0.5s ease;
+  background-color: var(--blue);
+  border: 0px solid transparent;
+  margin: 15px auto 0px;
+  width: 15%;
+  height: 2px;
+}
+/* end section-3 */
+/* start section-4 */
+.section-4 .container .lines-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  color: var(--gold);
+  z-index: 10;
+}
+.section-4 .container .lines-content .text-line {
+  width: 100%;
+}
+.section-4 .container .lines-content .text-line .text {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.section-4 .container .lines-content .text-line .line-out {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  border-radius: 10px;
+  margin: 10px 0px;
+  background-color: var(--black-light);
+}
+.section-4 .container .lines-content .text-line span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: var(--blue);
+  transition: width 1.5s ease;
+  border-radius: 10px;
+}
+/* end section-4 */
+/* start section-5 */
+.section-5 .container .cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+
+.section-5 .container .card-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+.section-5 .container .card-grid-2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+.section-5 .container .cards .card {
+  height: 350px;
+  position: relative;
+}
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.text-bottom {
+  display: flex;
+  justify-content: space-around;
+}
+.section-5 .container .cards .card:hover img {
+  scale: (1.1);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(38, 97, 161, 0.9);
+  color: var(--gold); /* Text color */
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  visibility: hidden;
+}
+.card:hover .card-overlay {
+  visibility: visible;
+}
+/* end section-5 */
+/* start section-6 */
+.section-6 .container .cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.section-6 .container .cards a:hover i {
+  color: var(--gold);
+}
+.section-6 .container .cards a:hover h4 {
+  color: var(--wight);
+}
+.section-6 .container .cards a:hover p {
+  color: var(--gold);
+}
+.section-6 .container .cards .card i {
+  color: var(--blue);
+  font-size: 50px;
+  margin-bottom: 30px;
+  padding: 40px;
+  border-radius: 50%;
+  background-color: var(--black-light);
+  box-shadow: 1px 5px 20px var(--gold);
+}
+.section-6 .container .cards .card h4 {
+  color: var(--wight);
+}
+.section-6 .container .cards .card p {
+  color: var(--blue);
+  font-weight: bold;
+  margin-top: 15px;
+}
+.section-6 .container .data {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  text-align: end;
+  margin-top: 20px;
+}
+.section-6 .container .data img {
+  width: 50%;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 100px;
+}
+.section-6 .container .data form {
+  border-radius: 50px;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  background-color: var(--black-light);
+  padding: 50px;
+  text-align: left;
+}
+.section-6 .container .data form input,
+.section-6 .container .data form textarea {
+  padding: 15px 20px;
+  font-size: 15px;
+  color: var(--blue);
+  margin: 10px 0px;
+  border-radius: 5px;
+  border: 2px solid var(--gold);
+  font-family: "Arial" , sans-serif;
+}
+.section-6 .container .data form input::placeholder,
+.section-6 .container .data form textarea::placeholder {
+  color: var(--blue);
+  font-weight: bold;
+}
+.section-6 .container .data form .SEND {
+  cursor: pointer;
+  width: 40%;
+  border-radius: 50px;
+  padding: 10px;
+  color: var(--wight);
+  border: 2px solid var(--gold);
+  background-color: var(--blue);
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+.section-6 .container .data form .SEND:hover {
+  background-color: var(--gold);
+  border: 2px solid var(--blue);
+}
+/* end section-6 */
+/* start footer */
+.footer {
+  word-spacing: 3px;
+  line-height: 25px;
+  background-color: var(--black-light);
+  height: calc(100vh - 85px);
+  align-content: center;
+  text-align: start;
+  position: relative;
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.footer .About-Us .icons {
+  display: flex;
+  justify-content: space-around;
+}
+.footer .About-Us .icons a i {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  border: solid 1.5px var(--gold);
+  text-align: center;
+  align-content: center;
+  color: var(--gold);
+  transition: 0.2s ease;
+}
+.footer .About-Us a i:hover {
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+.footer .titles-footer {
+  color: var(--blue);
+}
+.footer .About-Us p {
+  color: var(--wight);
+}
+.footer .About-Us a {
+  width: 40px;
+}
+
+.footer hr {
+  width: 55px;
+  border: 1.5px solid var(--gold);
+  margin: 20px 0px 40px;
+}
+.footer .Quick-Links .lines {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.footer .Quick-Links .lines a {
+  color: var(--wight);
+}
+.footer .Quick-Links .lines a:hover {
+  color: var(--blue);
+}
+.footer .Quick-Links .line-one {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.footer ul {
+  list-style: none;
+}
+.footer li {
+  transition: 0.3s ease;
+  margin: 0px 0px 15px;
+}
+.footer ul li::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-radius: 5px;
+  margin-right: 10px;
+  border-top: transparent 5px solid;
+  border-bottom: transparent 5px solid;
+  border-left: 5px solid var(--blue);
+}
+.footer a:hover li {
+  padding-left: 10px;
+}
+
+.footer .OpenHours {
+  color: var(--wight);
+}
+.footer .OpenHours .times {
+  margin-top: 20px;
+}
+.footer .OpenHours .times .time {
+  display: flex;
+  margin-bottom: 10px;
+}
+.footer .OpenHours .times .time i {
+  margin-right: 10px;
+}
+.footer .Newsletter {
+  color: var(--wight);
+}
+.footer .Newsletter form {
+  position: relative;
+  margin-top: 30px;
+}
+.footer .Newsletter form input {
+  color: var(--gold);
+  width: 80%;
+  height: 50px;
+  background-color: var(--blue);
+  border: 1px solid var(--white);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 20px;
+}
+.footer .Newsletter form input::placeholder {
+  color: var(--gold);
+  font-weight: bold;
+}
+.footer .Newsletter form button {
+  position: absolute;
+  width: 20%;
+  height: 50px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: var(--gold);
+}
+.footer .Newsletter form button:hover {
+  background-color: var(--blue);
+  border-left: 1px solid var(--wight);
+}
+.footer-text {
+  background-color: var(--black);
+  color: var(--gold);
+  text-align: center;
+  align-content: center;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+}
+.footer-text a {
+  color: var(--blue);
+}
+/* end footer */
