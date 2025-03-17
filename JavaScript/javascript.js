@@ -91,22 +91,18 @@ window.onbeforeunload = () => {
 
 
 
-emailjs.init("GcT9_dVLZ8wu2LbZf")
-document.querySelector('#section-6 form').addEventListener('submit', (e)=>{
-  e.preventDefault();
-  
-  // (error)=> alert('Error :' + error.text))
 
+
+
+
+
+function sendEmail() {
   const name = document.getElementById('name').value;
-  const email = document.getElementById('email').email;
+  const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
-  if (name && email && message){
-    emailjs.sendForm('service_wznx6it', template_mpj7vho, e.target)
-    .then(()=> { alert('message sent successfully!'), 
-    e.target.reset(); },
-    (error)=>{  alert ('Error :' + error.text)});
-  }
-  else{
-    alert('please fill all fields!')
-  }
-});
+  const subject = `Message from ${name})`;
+
+  const body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+  const mailtoLink = `mailto:abdulrahmanabusamra0@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailtoLink;
+}

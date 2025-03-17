@@ -383,7 +383,7 @@ header .container i {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(38, 97, 161, 0.9);
+  background-color: rgba(34, 108, 188, 0.836);
   color: var(--gold); /* Text color */
   font-weight: bold;
   font-size: 20px;
