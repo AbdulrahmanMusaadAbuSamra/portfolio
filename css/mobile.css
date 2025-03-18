@@ -113,9 +113,12 @@
     }
     .sections .container .h1-title {
       font-size: 40px;
+      text-shadow: 0px 30px 0px rgba(53, 122, 196, 0.638);
     }
-    .h1-title .span-title {
-      font-size: 70px;
+    .p-title {
+      margin: 45px auto 35px;
+      line-height: 20px;
+      color: var(--wight);
     }
     /* Similar features with in each sections */
     /* start section-2 */
